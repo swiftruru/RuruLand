@@ -242,30 +242,22 @@ nav .container {
 }
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     animation: fadeInUp 1s ease-out 0.2s backwards;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.hero-subtitle-en {
-    font-size: 1.3rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 1s ease-out 0.25s backwards;
-    font-weight: 500;
-    opacity: 0.9;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .hero .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
     margin-bottom: 3rem;
     animation: fadeInUp 1s ease-out 0.3s backwards;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
 }
 
 .hero-buttons {
@@ -364,14 +356,18 @@ nav .container {
 
 .intro-text {
     font-size: 1.1rem;
-    line-height: 2;
+    line-height: 1.8;
     color: var(--text-primary);
-    text-align: justify;
-    padding: 2rem;
+    text-align: left;
+    padding: 2.5rem;
     background: white;
-    border-radius: 20px;
-    border-left: 5px solid var(--primary-color);
-    box-shadow: 0 5px 20px rgba(26, 95, 63, 0.1);
+    border-radius: 2px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    letter-spacing: 0.3px;
 }
 
 .skills-section {
@@ -384,15 +380,19 @@ nav .container {
 .skill-category {
     background: white;
     padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(26, 95, 63, 0.08);
-    border: 2px solid rgba(26, 95, 63, 0.1);
+    border-radius: 2px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(26, 95, 63, 0.12);
     transition: all 0.3s ease;
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(26, 95, 63, 0.15);
+    transform: translateY(-3px);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.1),
+        0 8px 20px rgba(0, 0, 0, 0.08);
     border-color: var(--primary-color);
 }
 
@@ -507,16 +507,20 @@ nav .container {
 
 .project-card {
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 2px;
     overflow: hidden;
     transition: all 0.3s ease;
-    border: 2px solid rgba(26, 95, 63, 0.15);
-    box-shadow: 0 8px 25px rgba(26, 95, 63, 0.08);
+    border: 1px solid rgba(26, 95, 63, 0.12);
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px var(--shadow-color);
+    transform: translateY(-5px);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.1),
+        0 10px 25px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-color);
 }
 
@@ -781,16 +785,12 @@ footer p {
     }
 
     .hero-title {
-        font-size: 1.5rem;
-    }
-
-    .hero-subtitle-en {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 
     .hero .subtitle {
         font-size: 0.95rem;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
     }
 
     .hero-buttons {
@@ -873,19 +873,23 @@ footer p {
 
 /* 技能亮點高亮 */
 .highlight-section {
-    background: rgba(232, 245, 233, 0.6);
+    background: rgba(232, 245, 233, 0.4);
     padding: 1.5rem;
-    border-radius: 15px;
+    border-radius: 2px;
     border-left: 4px solid var(--primary-color);
     margin-top: 1rem;
-    box-shadow: 0 4px 12px rgba(26, 95, 63, 0.08);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.05),
+        0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
 }
 
 .highlight-section:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 18px rgba(26, 95, 63, 0.15);
-    background: rgba(232, 245, 233, 0.8);
+    transform: translateX(3px);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    background: rgba(232, 245, 233, 0.6);
 }
 
 .highlight-section h4 {
@@ -935,21 +939,16 @@ footer p {
     color: white;
 }
 
-/* intro-text 更像履歷摘要段落 */
-.intro-text {
-    background: white;
-    border-left: 4px solid var(--primary-color);
-    position: relative;
-}
-
+/* intro-text 頂部強調色塊 */
 .intro-text::before {
     content: '';
     position: absolute;
     top: 0;
     left: -4px;
     width: 4px;
-    height: 30px;
+    height: 40px;
     background: var(--secondary-color);
+    border-radius: 2px 0 0 0;
 }
 
 /* ==================== 列印樣式 ==================== */
