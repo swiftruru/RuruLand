@@ -20,40 +20,47 @@
     <nav>
         <div class="container">
             <div class="logo">Ruru's Portfolio</div>
+            <button class="lang-switch" id="langSwitch" aria-label="語言切換">
+                <span class="lang-icon">🌐</span>
+                <span class="lang-text">EN</span>
+            </button>
             <button class="hamburger" aria-label="選單">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#projects">作品集</a></li>
-                <li><a href="#contact">聯絡我</a></li>
+                <li><a href="#home" data-zh="首頁" data-en="Home">首頁</a></li>
+                <li><a href="#about" data-zh="關於我" data-en="About">關於我</a></li>
+                <li><a href="#projects" data-zh="作品集" data-en="Projects">作品集</a></li>
+                <li><a href="#contact" data-zh="聯絡我" data-en="Contact">聯絡我</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="container">
+            <div class="hero-profile">
+                <img src="assets/images/profile.jpg" alt="潘昱如的照片" class="profile-photo">
+            </div>
             <h1>潘昱如</h1>
             <h2 class="hero-subtitle">Yu-Ru Pan</h2>
             <p class="hero-title">Full Stack Developer</p>
-            <p class="subtitle">專注於現代化 Web 應用開發 × 雲端架構設計 × 系統優化</p>
+            <p class="subtitle" data-zh="專注於現代化 Web 應用開發 × 雲端架構設計 × 系統優化" data-en="Focused on Modern Web Development × Cloud Architecture × System Optimization">專注於現代化 Web 應用開發 × 雲端架構設計 × 系統優化</p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">關於我</a>
-                <a href="#projects" class="btn btn-outline">查看作品</a>
+                <a href="#about" class="btn btn-primary" data-zh="關於我" data-en="About Me">關於我</a>
+                <a href="#projects" class="btn btn-outline" data-zh="查看作品" data-en="View Projects">查看作品</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">關於我</h2>
+            <h2 class="section-title" data-zh="關於我" data-en="About Me">關於我</h2>
             <div class="about-content fade-in">
                 <div class="about-intro">
-                    <p class="intro-text">
-                        具備 2 年以上金流系統開發實戰經驗，現就讀國立台北護理健康大學資訊管理碩士班。擅長 .NET Framework / MVC / Core 全系列技術及前端 Vue.js / JavaScript 開發。曾主導金流核心系統開發與舊系統現代化重構，並協助取得 PCI DSS 4.0 國際認證。熟悉 Git 版本控制、Azure DevOps CI/CD 及 GCP 雲端平台。具優良 TA 經驗，樂於技術分享與團隊協作。
+                    <p class="intro-text" data-zh="具備 2 年以上金流系統開發實戰經驗，現就讀國立台北護理健康大學資訊管理碩士班。擅長 .NET Framework / MVC / Core 全系列技術及前端 Vue.js / JavaScript 開發。曾主導金流核心系統開發與舊系統現代化重構，並協助取得 PCI DSS 4.0 國際認證。熟悉 Git 版本控制、Azure DevOps CI/CD 及 GCP 雲端平台。具優良 TA 經驗，樂於技術分享與團隊協作。" data-en="With over 2 years of hands-on experience in payment system development, currently pursuing a Master's degree in Information Management at National Taipei University of Nursing and Health Sciences. Proficient in the complete .NET Framework / MVC / Core technology stack and frontend development with Vue.js / JavaScript. Led payment core system development and legacy system modernization, contributed to achieving PCI DSS 4.0 international certification. Skilled in Git version control, Azure DevOps CI/CD, and GCP cloud platform. Experienced TA with a passion for technical sharing and team collaboration.">
+                        具備 2 年以上金流系統開發實戰經驗，現就讀國立台北護理健康大學資訊管理碩士班。擅長 .NET Framework / MVC / Core 全系列技術及前端 Vue.js / JavaScript 開發。曾主導金流核心系統開發與舊系統現代化重構，並協助取得 PCI DSS 4.0 國際認證。熟悉 Git 版本控制、Azure DevOps CI/CD 及 GCP 雲端平台。具優良 TA 經驗,樂於技術分享與團隊協作。
                     </p>
                 </div>
 
@@ -259,6 +266,10 @@
             <h2 class="section-title">聯絡我</h2>
             <div class="contact-content fade-in">
                 <div class="social-links">
+                    <a href="mailto:ruru@swift.moe" class="social-link">
+                        <span class="icon">📧</span>
+                        <span>ruru@swift.moe</span>
+                    </a>
                     <a href="https://swift.moe" target="_blank" class="social-link">
                         <span class="icon">🌐</span>
                         <span>swift.moe</span>
@@ -277,6 +288,12 @@
             <p>&copy; 2026 Ruru's Portfolio. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- 照片放大 Modal -->
+    <div id="photoModal" class="photo-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage" alt="潘昱如的照片">
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
