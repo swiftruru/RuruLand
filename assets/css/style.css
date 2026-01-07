@@ -628,11 +628,22 @@ nav .container {
     border-color: var(--secondary-color);
 }
 
+/* 聯絡區域 */
+.contact {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(232, 245, 233, 0.3) 100%);
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 3rem 0;
-    margin-top: 5rem;
     border-top: 2px solid rgba(26, 95, 63, 0.15);
     background: linear-gradient(180deg, transparent 0%, rgba(232, 245, 233, 0.5) 100%);
 }
