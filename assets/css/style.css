@@ -5,21 +5,21 @@
 }
 
 :root {
-    --primary-color: #e879f9;
-    --secondary-color: #c084fc;
-    --accent-color: #fb7185;
-    --light-pink: #fce7f3;
-    --soft-purple: #f3e8ff;
-    --dark-bg: #fef3f8;
+    --primary-color: #1a5f3f;
+    --secondary-color: #2d7a52;
+    --accent-color: #3a9664;
+    --light-green: #e8f5e9;
+    --soft-green: #c8e6c9;
+    --dark-bg: #f8fdf9;
     --card-bg: #ffffff;
-    --text-primary: #4a1942;
-    --text-secondary: #7e3a75;
-    --text-muted: #a855f7;
-    --gradient-1: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
-    --gradient-2: linear-gradient(135deg, #f6d5f7 0%, #fbe9d7 100%);
-    --gradient-3: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
-    --gradient-bg: linear-gradient(180deg, #fef3f8 0%, #fce7f3 50%, #f3e8ff 100%);
-    --shadow-color: rgba(232, 121, 249, 0.3);
+    --text-primary: #1a3a2e;
+    --text-secondary: #2d5f4d;
+    --text-muted: #4a7c59;
+    --gradient-1: linear-gradient(135deg, #1a5f3f 0%, #2d7a52 100%);
+    --gradient-2: linear-gradient(135deg, #2d7a52 0%, #3a9664 100%);
+    --gradient-3: linear-gradient(135deg, #3a9664 0%, #4caf50 100%);
+    --gradient-bg: linear-gradient(180deg, #ffffff 0%, #f1f8f4 50%, #e8f5e9 100%);
+    --shadow-color: rgba(26, 95, 63, 0.2);
 }
 
 body {
@@ -56,7 +56,7 @@ body {
 .animated-bg::before {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(232, 121, 249, 0.4) 0%, rgba(192, 132, 252, 0.2) 50%, transparent 100%);
+    background: radial-gradient(circle, rgba(26, 95, 63, 0.15) 0%, rgba(45, 122, 82, 0.08) 50%, transparent 100%);
     top: -200px;
     right: -200px;
     animation-delay: 0s;
@@ -65,7 +65,7 @@ body {
 .animated-bg::after {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(251, 113, 133, 0.3) 0%, rgba(249, 168, 212, 0.2) 50%, transparent 100%);
+    background: radial-gradient(circle, rgba(58, 150, 100, 0.12) 0%, rgba(76, 175, 80, 0.06) 50%, transparent 100%);
     bottom: -150px;
     left: -150px;
     animation-delay: 10s;
@@ -83,12 +83,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     padding: 1.5rem 2rem;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(232, 121, 249, 0.15);
-    border-bottom: 1px solid rgba(232, 121, 249, 0.1);
+    box-shadow: 0 2px 15px rgba(26, 95, 63, 0.1);
+    border-bottom: 2px solid rgba(26, 95, 63, 0.1);
 }
 
 nav .container {
@@ -232,39 +232,22 @@ nav .container {
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
-    background: var(--gradient-1);
-    color: var(--text-primary);
+    background: var(--primary-color);
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease-out 0.6s backwards;
-    box-shadow: 0 8px 25px var(--shadow-color);
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.btn:hover::before {
-    width: 300px;
-    height: 300px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 35px var(--shadow-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 /* 作品集區域 */
@@ -291,17 +274,17 @@ nav .container {
 
 .project-card {
     background: var(--card-bg);
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid rgba(232, 121, 249, 0.15);
-    box-shadow: 0 10px 30px rgba(232, 121, 249, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(26, 95, 63, 0.15);
+    box-shadow: 0 8px 25px rgba(26, 95, 63, 0.08);
 }
 
 .project-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px var(--shadow-color);
-    border-color: rgba(232, 121, 249, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border-color: var(--primary-color);
 }
 
 /* 專案圖片 */
@@ -330,13 +313,13 @@ nav .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(252, 231, 243, 0.95) 0%, rgba(243, 232, 255, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(26, 95, 63, 0.92) 0%, rgba(45, 122, 82, 0.92) 100%);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
@@ -345,23 +328,26 @@ nav .container {
 
 .overlay-link {
     padding: 1rem 2.5rem;
-    background: var(--gradient-1);
-    color: var(--text-primary);
+    background: white;
+    color: var(--primary-color);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 8px 20px var(--shadow-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
 }
 
 .project-card:hover .overlay-link {
-    transform: translateY(0) scale(1.05);
+    transform: translateY(0);
 }
 
 .overlay-link:hover {
-    transform: translateY(0) scale(1.1);
-    box-shadow: 0 10px 30px var(--shadow-color);
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(0) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .project-header {
@@ -395,7 +381,7 @@ nav .container {
 }
 
 .project-url {
-    color: var(--text-primary);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-size: 0.9rem;
     display: inline-flex;
@@ -403,12 +389,11 @@ nav .container {
     gap: 0.5rem;
     position: relative;
     z-index: 1;
-    opacity: 0.9;
     transition: opacity 0.3s ease;
 }
 
 .project-url:hover {
-    opacity: 1;
+    color: white;
     text-decoration: underline;
 }
 
@@ -464,40 +449,43 @@ nav .container {
 }
 
 .tech-tag {
-    background: linear-gradient(135deg, rgba(252, 231, 243, 0.5), rgba(243, 232, 255, 0.5));
-    color: var(--text-secondary);
+    background: rgba(26, 95, 63, 0.08);
+    color: var(--primary-color);
     padding: 0.5rem 1.2rem;
     border-radius: 25px;
     font-size: 0.85rem;
-    border: 1.5px solid rgba(232, 121, 249, 0.2);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1.5px solid rgba(26, 95, 63, 0.2);
+    transition: all 0.3s ease;
     font-weight: 500;
 }
 
 .tech-tag:hover {
-    background: var(--gradient-1);
-    color: var(--text-primary);
-    border-color: rgba(232, 121, 249, 0.4);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(232, 121, 249, 0.2);
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 95, 63, 0.25);
 }
 
 .project-link {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.9rem 2rem;
-    background: var(--gradient-1);
-    color: var(--text-primary);
+    background: var(--primary-color);
+    color: white;
     text-decoration: none;
     border-radius: 50px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     font-weight: 600;
-    box-shadow: 0 5px 20px var(--shadow-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border: 2px solid var(--primary-color);
 }
 
 .project-link:hover {
-    transform: translateX(8px) scale(1.05);
-    box-shadow: 0 8px 30px var(--shadow-color);
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px var(--shadow-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 /* Footer */
@@ -505,8 +493,8 @@ footer {
     text-align: center;
     padding: 3rem 0;
     margin-top: 5rem;
-    border-top: 2px solid rgba(232, 121, 249, 0.15);
-    background: linear-gradient(180deg, transparent 0%, rgba(252, 231, 243, 0.3) 100%);
+    border-top: 2px solid rgba(26, 95, 63, 0.15);
+    background: linear-gradient(180deg, transparent 0%, rgba(232, 245, 233, 0.5) 100%);
 }
 
 footer p {
@@ -548,14 +536,15 @@ footer p {
         height: 100vh;
         width: 70%;
         max-width: 300px;
-        background: linear-gradient(135deg, rgba(252, 231, 243, 0.98) 0%, rgba(243, 232, 255, 0.98) 100%);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
         transition: right 0.3s ease;
-        box-shadow: -5px 0 25px rgba(232, 121, 249, 0.3);
+        box-shadow: -5px 0 25px rgba(26, 95, 63, 0.2);
+        border-left: 3px solid var(--primary-color);
     }
 
     .nav-links.active {
@@ -585,21 +574,22 @@ footer p {
 
 /* 技能亮點高亮 */
 .highlight-section {
-    background: linear-gradient(135deg, rgba(252, 231, 243, 0.4), rgba(243, 232, 255, 0.4));
+    background: rgba(232, 245, 233, 0.6);
     padding: 1.5rem;
-    border-radius: 20px;
+    border-radius: 15px;
     border-left: 4px solid var(--primary-color);
     margin-top: 1rem;
-    box-shadow: 0 5px 15px rgba(232, 121, 249, 0.1);
+    box-shadow: 0 4px 12px rgba(26, 95, 63, 0.08);
     transition: all 0.3s ease;
 }
 
 .highlight-section:hover {
     transform: translateX(5px);
-    box-shadow: 0 8px 20px rgba(232, 121, 249, 0.2);
+    box-shadow: 0 6px 18px rgba(26, 95, 63, 0.15);
+    background: rgba(232, 245, 233, 0.8);
 }
 
 .highlight-section h4 {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-weight: 700;
 }
