@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruru's Portfolio | 作品集</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">Ruru's Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#projects">作品集</a></li>
+                <li><a href="#contact">聯絡我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Ruru's Portfolio</h1>
+            <p>全端開發者 | Full Stack Developer</p>
+            <p class="subtitle">專注於現代化 Web 應用開發與雲端部署</p>
+            <a href="#projects" class="btn">查看作品</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">我的作品集</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1: 香水電商平台 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="assets/images/projects/01_FLORIS.jpeg" alt="香水電商平台截圖">
+                        <div class="project-overlay">
+                            <a href="https://perfume.azurewebsites.net/" target="_blank" class="overlay-link">
+                                查看網站 →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <h3>香水電商平台</h3>
+                        <a href="https://perfume.azurewebsites.net/" target="_blank" class="project-url">
+                            🔗 perfume.azurewebsites.net
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <p class="project-description">
+                                透過與組員協作，完成一個販售香水的電商平台，藉此熟悉後端框架運用、設計模型、API 撰寫與前端網頁的資料傳輸。
+                            </p>
+                        </div>
+
+                        <div class="project-section">
+                            <h4>📋 負責項目</h4>
+                            <ul>
+                                <li>資料表設計</li>
+                                <li>頁面協助指導</li>
+                                <li>商品列表與商品主頁面程式撰寫</li>
+                                <li>路由設計</li>
+                                <li>Icon 設計</li>
+                                <li>購物車設計</li>
+                                <li>會員中心與訂單詳細頁面設計</li>
+                                <li>後台訂單管理</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-section">
+                            <h4>🛠️ 運用技術</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">ASP.NET MVC</span>
+                                <span class="tech-tag">T-SQL</span>
+                                <span class="tech-tag">Razor</span>
+                                <span class="tech-tag">HtmlHelper</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Sass</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <a href="https://perfume.azurewebsites.net/" target="_blank" class="project-link">
+                            查看專案 →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Django 部落格平台 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="assets/images/projects/02_RuDjango.png" alt="RuDjango 技術部落格平台截圖">
+                        <div class="project-overlay">
+                            <a href="https://django.swift.moe/" target="_blank" class="overlay-link">
+                                查看網站 →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-header" style="background: var(--gradient-2);">
+                        <h3>RuDjango 技術部落格平台</h3>
+                        <a href="https://django.swift.moe/" target="_blank" class="project-url">
+                            🔗 django.swift.moe
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <p class="project-description">
+                                獨立開發並部署的全端部落格系統，採用現代化 Python Web 框架與雲端容器化部署架構。專案涵蓋完整的 CRUD 操作、使用者認證授權、即時通訊、安全性管控等企業級功能，實現從開發到生產環境的完整 DevOps 流程。
+                            </p>
+                        </div>
+
+                        <div class="project-section">
+                            <h4>📋 核心功能與負責項目</h4>
+                            <ul>
+                                <li>資料庫架構設計（PostgreSQL 關聯式資料表建模）</li>
+                                <li>RESTful API 設計</li>
+                                <li>文章管理系統（WYSIWYG 編輯器整合）</li>
+                                <li>動態標籤分類系統（多對多關聯查詢優化）</li>
+                                <li>使用者身份驗證機制（Session 管理、密碼雜湊加密）</li>
+                                <li>持久化登入功能（Remember Me Token）</li>
+                                <li>個人資料管理模組</li>
+                                <li>密碼強度驗證與即時前端檢核</li>
+                                <li>技能標籤系統</li>
+                                <li>WebSocket 即時私訊功能</li>
+                                <li>IP 黑白名單安全管控</li>
+                                <li>登入嘗試記錄與異常偵測</li>
+                                <li>Django Admin 後台擴充</li>
+                                <li>CI/CD 自動化部署流程（Railway Platform）</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-section">
+                            <h4>🛠️ 技術棧（Tech Stack）</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python 3.x</span>
+                                <span class="tech-tag">Django 6.0</span>
+                                <span class="tech-tag">Django ORM</span>
+                                <span class="tech-tag">Django Channels</span>
+                                <span class="tech-tag">PostgreSQL 17</span>
+                                <span class="tech-tag">Daphne ASGI</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript ES6+</span>
+                                <span class="tech-tag">Railway</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Git</span>
+                            </div>
+                        </div>
+
+                        <div class="highlight-section">
+                            <h4>✨ 技術亮點</h4>
+                            <ul>
+                                <li>實作 Django ORM 複雜查詢優化（select_related、prefetch_related）</li>
+                                <li>自訂 Django Middleware 處理請求攔截與 IP 過濾</li>
+                                <li>前後端分離式表單驗證（Server-side + Client-side Validation）</li>
+                                <li>WebSocket 長連接實現即時雙向通訊</li>
+                                <li>Database Migration 管理與版本控制</li>
+                                <li>環境變數管理與敏感資料保護（.env 配置）</li>
+                                <li>雲端部署自動化（Git Push 觸發自動部署）</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://django.swift.moe/" target="_blank" class="project-link">
+                            查看專案 →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2026 Ruru's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
