@@ -210,18 +210,30 @@ nav .container {
 }
 
 .hero-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     animation: fadeInUp 1s ease-out 0.2s backwards;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hero-subtitle-en {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out 0.25s backwards;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .hero .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 3rem;
     animation: fadeInUp 1s ease-out 0.3s backwards;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .hero-buttons {
@@ -664,11 +676,16 @@ footer p {
     }
 
     .hero-title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle-en {
+        font-size: 1.1rem;
     }
 
     .hero .subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
     }
 
     .hero-buttons {
