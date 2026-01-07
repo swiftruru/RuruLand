@@ -1064,12 +1064,99 @@ footer p {
     background-size: 50px 50px;
 }
 
-/* 為主要容器添加頁面裝訂孔效果（可選） */
+/* ==================== 膠帶裝飾效果 ==================== */
+
+/* 為主要容器添加膠帶效果 */
 .hero .container,
 .about .container,
 .projects .container,
 .contact .container {
     position: relative;
+}
+
+/* 膠帶樣式 - 基礎 */
+.hero .container::after,
+.about .container::after,
+.projects .container::after,
+.contact .container::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    background: rgba(255, 220, 120, 0.7);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Hero section 膠帶 - 右上角 */
+.hero .container::after {
+    top: -15px;
+    right: 80px;
+    transform: rotate(5deg);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 220, 120, 0.75) 0%,
+        rgba(255, 230, 140, 0.75) 50%,
+        rgba(255, 220, 120, 0.75) 100%
+    );
+}
+
+/* About section 膠帶 - 左上角 */
+.about .container::after {
+    top: -15px;
+    left: 60px;
+    transform: rotate(-3deg);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 200, 180, 0.75) 0%,
+        rgba(255, 215, 195, 0.75) 50%,
+        rgba(255, 200, 180, 0.75) 100%
+    );
+}
+
+/* Projects section 膠帶 - 右上角 */
+.projects .container::after {
+    top: -15px;
+    right: 100px;
+    transform: rotate(4deg);
+    background: linear-gradient(
+        135deg,
+        rgba(180, 220, 255, 0.75) 0%,
+        rgba(200, 230, 255, 0.75) 50%,
+        rgba(180, 220, 255, 0.75) 100%
+    );
+}
+
+/* Contact section 膠帶 - 左上角 */
+.contact .container::after {
+    top: -15px;
+    left: 70px;
+    transform: rotate(-4deg);
+    background: linear-gradient(
+        135deg,
+        rgba(200, 255, 200, 0.75) 0%,
+        rgba(220, 255, 220, 0.75) 50%,
+        rgba(200, 255, 200, 0.75) 100%
+    );
+}
+
+/* 膠帶紋理效果 */
+.hero .container::after,
+.about .container::after,
+.projects .container::after,
+.contact .container::after {
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.1) 2px,
+            rgba(255, 255, 255, 0.1) 3px
+        );
 }
 
 /* 移除手機版的紙張效果以保持可讀性 */
@@ -1084,5 +1171,87 @@ footer p {
     .projects .container,
     .contact .container {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/* 為專案卡片添加小膠帶裝飾 */
+.project-card {
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 60px;
+    height: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 180, 200, 0.8) 0%,
+        rgba(255, 200, 220, 0.8) 50%,
+        rgba(255, 180, 200, 0.8) 100%
+    );
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.15) 2px,
+            rgba(255, 255, 255, 0.15) 3px
+        );
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 技能卡片的膠帶 */
+.skill-category {
+    position: relative;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    width: 50px;
+    height: 18px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 240, 150, 0.8) 0%,
+        rgba(255, 245, 170, 0.8) 50%,
+        rgba(255, 240, 150, 0.8) 100%
+    );
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.15) 2px,
+            rgba(255, 255, 255, 0.15) 3px
+        );
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.15);
+    transform: rotate(3deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 手機版移除膠帶效果保持簡潔 */
+@media (max-width: 768px) {
+    .hero .container::after,
+    .about .container::after,
+    .projects .container::after,
+    .contact .container::after,
+    .project-card::before,
+    .skill-category::before {
+        display: none;
     }
 }
