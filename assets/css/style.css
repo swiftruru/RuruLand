@@ -24,7 +24,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--gradient-bg);
+    /* 紙張質感背景 */
+    background: #e8e8e0;
+    background-image:
+        linear-gradient(90deg, transparent 79px, rgba(26, 95, 63, 0.04) 79px, rgba(26, 95, 63, 0.04) 81px, transparent 81px),
+        linear-gradient(rgba(26, 95, 63, 0.02) 0.1em, transparent 0.1em);
+    background-size: 100% 1.5em;
     background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
@@ -191,6 +196,33 @@ nav .container {
     justify-content: center;
     text-align: center;
     padding-top: 80px;
+    position: relative;
+}
+
+.hero .container {
+    background: #fdfdf8;
+    padding: 4rem 3rem;
+    border-radius: 4px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 32px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(26, 95, 63, 0.08);
+    position: relative;
+    max-width: 900px;
+}
+
+/* 紙張邊緣效果 */
+.hero .container::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, rgba(26, 95, 63, 0.03) 0%, transparent 50%);
+    border-radius: 4px;
+    z-index: -1;
 }
 
 .hero h1 {
@@ -294,7 +326,31 @@ nav .container {
 /* 關於我區域 */
 .about {
     padding: 5rem 0;
-    background: rgba(255, 255, 255, 0.5);
+    background: transparent;
+}
+
+.about .container {
+    background: #fdfdf8;
+    padding: 4rem 3rem;
+    border-radius: 4px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 32px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(26, 95, 63, 0.08);
+    position: relative;
+}
+
+.about .container::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, rgba(26, 95, 63, 0.03) 0%, transparent 50%);
+    border-radius: 4px;
+    z-index: -1;
 }
 
 .about-content {
@@ -405,6 +461,31 @@ nav .container {
 /* 作品集區域 */
 .projects {
     padding: 5rem 0;
+    background: transparent;
+}
+
+.projects .container {
+    background: #fdfdf8;
+    padding: 4rem 3rem;
+    border-radius: 4px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 32px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(26, 95, 63, 0.08);
+    position: relative;
+}
+
+.projects .container::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, rgba(26, 95, 63, 0.03) 0%, transparent 50%);
+    border-radius: 4px;
+    z-index: -1;
 }
 
 .section-title {
@@ -643,7 +724,31 @@ nav .container {
 /* 聯絡區域 */
 .contact {
     padding: 5rem 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(232, 245, 233, 0.3) 100%);
+    background: transparent;
+}
+
+.contact .container {
+    background: #fdfdf8;
+    padding: 4rem 3rem;
+    border-radius: 4px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 32px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(26, 95, 63, 0.08);
+    position: relative;
+}
+
+.contact .container::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, rgba(26, 95, 63, 0.03) 0%, transparent 50%);
+    border-radius: 4px;
+    z-index: -1;
 }
 
 .contact-content {
@@ -786,4 +891,199 @@ footer p {
 .highlight-section h4 {
     color: var(--primary-color);
     font-weight: 700;
+}
+
+
+/* ==================== 紙質履歷增強效果 ==================== */
+
+/* 為每個section標題添加下劃線裝飾（類似履歷分隔線） */
+.section-title {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--primary-color) 50%, transparent 100%);
+}
+
+/* 簡歷項目前的裝飾點 */
+.project-section h4::before,
+.skill-category h3::before {
+    content: '▪';
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+/* 技能標籤更簡潔的履歷風格 */
+.tech-tag {
+    background: white;
+    border: 1.5px solid var(--primary-color);
+    color: var(--text-primary);
+}
+
+.tech-tag:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* intro-text 更像履歷摘要段落 */
+.intro-text {
+    background: white;
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+}
+
+.intro-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 4px;
+    height: 30px;
+    background: var(--secondary-color);
+}
+
+/* ==================== 列印樣式 ==================== */
+@media print {
+    /* 隱藏不需要列印的元素 */
+    nav,
+    .hamburger,
+    .animated-bg,
+    .hero-buttons,
+    .project-overlay,
+    footer {
+        display: none !important;
+    }
+
+    /* 重置背景為純白 */
+    body {
+        background: white !important;
+        color: #000 !important;
+    }
+
+    /* 移除陰影和邊框效果 */
+    .hero .container,
+    .about .container,
+    .projects .container,
+    .contact .container {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+
+    .hero .container::before,
+    .about .container::before,
+    .projects .container::before,
+    .contact .container::before {
+        display: none !important;
+    }
+
+    /* 調整間距以適合A4紙張 */
+    section {
+        padding: 1rem 0 !important;
+    }
+
+    .hero {
+        min-height: auto !important;
+        padding-top: 0 !important;
+    }
+
+    /* 標題樣式調整 */
+    .hero h1 {
+        font-size: 2.5rem !important;
+        color: #000 !important;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+        color: #000 !important;
+        page-break-after: avoid;
+    }
+
+    /* 確保專案卡片適合列印 */
+    .project-card {
+        page-break-inside: avoid;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        margin-bottom: 1rem;
+    }
+
+    .project-image {
+        height: auto !important;
+        max-height: 200px;
+    }
+
+    /* 移除連結裝飾但保留文字 */
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    /* 顯示連結URL */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* 技能標籤列印樣式 */
+    .tech-tag {
+        border: 1px solid #333 !important;
+        color: #000 !important;
+        background: white !important;
+    }
+
+    /* 頁面分頁控制 */
+    .hero,
+    .about,
+    .projects,
+    .contact {
+        page-break-inside: avoid;
+    }
+}
+
+/* ==================== 額外的紙張質感細節 ==================== */
+
+/* 為卡片添加細微的紙張紋理 */
+.skill-category,
+.project-card,
+.intro-text {
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+}
+
+/* 為主要容器添加頁面裝訂孔效果（可選） */
+.hero .container,
+.about .container,
+.projects .container,
+.contact .container {
+    position: relative;
+}
+
+/* 移除手機版的紙張效果以保持可讀性 */
+@media (max-width: 768px) {
+    body {
+        background: #f5f5f0 !important;
+        background-image: none !important;
+    }
+
+    .hero .container,
+    .about .container,
+    .projects .container,
+    .contact .container {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
 }
